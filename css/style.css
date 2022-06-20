@@ -1,0 +1,116 @@
+* {
+  margin: none;
+  padding: none;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #ffee97;
+}
+#startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoStart {
+  display: flex;
+  width: 275px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 80px;
+}
+.iconSize {
+  width: 91px;
+}
+#logo {
+  display: flex;
+  align-self: center;
+  width: 256px;
+}
+.startButton {
+  width: 208px;
+  height: 52px;
+  background-color: #f15a24;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fbb03b;
+  margin-top: 85px;
+}
+
+#signature {
+  margin-top: 175px;
+  color: #f15a24;
+  font-size: 12px;
+  font-weight: 500;
+}
+#logoGame {
+  margin-top: 30px;
+  display: flex;
+  align-self: center;
+  width: 208px;
+}
+#gameScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scoreboardChoices {
+  display: flex;
+  flex-direction: row;
+  width: 290px;
+  margin-top: 50px;
+  background-color: red;
+  justify-content: space-between;
+}
+#player {
+  width: 92px;
+}
+.playerCounter {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+.name {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+.playerChoice {
+  height: 91px;
+  width: 91px;
+  background-color: #f15a24;
+}
+.theX {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+#computer {
+  width: 92px;
+}
+.computerCounter {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.computerChoice {
+  height: 91px;
+  width: 91px;
+  background-color: #f15a24;
+}
+#resultPhase {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+.choices {
+  display: flex;
+  flex-direction: row;
+}

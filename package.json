@@ -1,0 +1,9 @@
+{
+  "scripts": {
+  "sass": "node-sass -w scss/ -o css/ --recursiven",
+  "scss": "node-sass -watch scss -o css"
+},
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

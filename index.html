@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Jó - Quem? - Pô</title>
+</head>
+
+<body>
+    <Section id="startScreen" style="display:none;">
+        <section class="logoStart">
+            <div class="rockIcon"><img class="iconSize" src="images/rock.png" alt=""></div>
+            <div class="paperIcon" class="iconSize"><img class="iconSize" src="images/paper.png" alt=""></div>
+            <div class="scissorsIcon" class="iconSize"><img class="iconSize" src="images/scissors.png" alt=""></div>
+            <div id="logoImg"><img id="logo" src="images/logo.png" alt=""></div>
+        </section>
+        <input type="button" value="START" class="startButton">
+        <footer id="endSite">
+            <p id="signature">Design e desenvolvimento por:<a href="http://github.com/BezerraPedrinho" target="_blank"
+                    rel="noopener noreferrer"></a> <b>Pedro Henrique</b></p>
+        </footer>
+    </Section>
+    <section id="gameScreen">
+
+        <img id="logoGame" src="images/logo.png" alt="">
+
+        <section class="scoreboardChoices">
+            <section id="player">
+                <p class="playerCounter">0</p>
+                <p class="name">Você</p>
+                <div class="playerChoice"></div>
+            </section>
+            <div class="theX">X</div>
+            <section id="computer">
+                <p class="computerCounter">0</p>
+                <p class="name">Máquina</p>
+                <div class="computerChoice"></div>
+            </section>
+        </section>
+        <div id="resultPhase">
+            <p>Você venceu</p>
+        </div>
+        <div id="selectMove">
+            <p>Selecione seu movimento</p>
+        </div>
+        <section class="choices">
+            <div class="rockIcon"><img class="iconSize" src="images/rock.png" alt=""></div>
+            <div class="paperIcon"><img class="iconSize" src="images/paper.png" alt=""></div>
+            <div class="scissorsIcon"><img class="iconSize" src="images/scissors.png" alt=""></div>
+        </section>
+    </section>
+</body>
+
+</html>
