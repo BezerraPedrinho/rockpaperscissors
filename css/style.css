@@ -5,6 +5,9 @@
 }
 body {
   background-color: #ffee97;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #startScreen {
   display: flex;
@@ -26,6 +29,7 @@ body {
   display: flex;
   align-self: center;
   width: 256px;
+  margin-bottom: 120px;
 }
 .startButton {
   width: 208px;
@@ -36,19 +40,12 @@ body {
   font-weight: 700;
   font-size: 32px;
   color: #fbb03b;
-  margin-top: 85px;
 }
 
-#signature {
-  margin-top: 175px;
-  color: #f15a24;
-  font-size: 12px;
-  font-weight: 500;
-}
 #logoGame {
   margin-top: 30px;
   display: flex;
-  align-self: center;
+  
   width: 208px;
 }
 #gameScreen {
@@ -98,7 +95,6 @@ body {
   margin: 0;
   text-align: center;
 }
-
 .computerChoice {
   height: 91px;
   width: 91px;
@@ -113,4 +109,52 @@ body {
 .choices {
   display: flex;
   flex-direction: row;
+}
+#finalScreen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.finalMensager{
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+.winner{
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+.win{
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+#resultScore{
+  height: 150px;
+}
+.gamescore{
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+.restartGame{
+  font-size: 15px ;
+  font-weight: 700;
+  text-align: center;
+}
+#endSite{
+ display: flex;
+ align-self: center ;
+ position: fixed;
+ bottom: 8px;
+}
+#signature {
+  color: #f15a24;
+  font-size: 12px;
+  font-weight: 500;
 }

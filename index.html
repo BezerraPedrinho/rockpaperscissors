@@ -13,20 +13,18 @@
 </head>
 
 <body>
-    <Section id="startScreen" style="display:none;">
+    <Section id="startScreen" style="display: none;">
         <section class="logoStart">
             <div class="rockIcon"><img class="iconSize" src="images/rock.png" alt=""></div>
             <div class="paperIcon" class="iconSize"><img class="iconSize" src="images/paper.png" alt=""></div>
             <div class="scissorsIcon" class="iconSize"><img class="iconSize" src="images/scissors.png" alt=""></div>
             <div id="logoImg"><img id="logo" src="images/logo.png" alt=""></div>
+            <input type="button" value="START" class="startButton">
         </section>
-        <input type="button" value="START" class="startButton">
-        <footer id="endSite">
-            <p id="signature">Design e desenvolvimento por:<a href="http://github.com/BezerraPedrinho" target="_blank"
-                    rel="noopener noreferrer"></a> <b>Pedro Henrique</b></p>
-        </footer>
+        
+        
     </Section>
-    <section id="gameScreen">
+    <section id="gameScreen"style="display: none;">
 
         <img id="logoGame" src="images/logo.png" alt="">
 
@@ -55,6 +53,22 @@
             <div class="scissorsIcon"><img class="iconSize" src="images/scissors.png" alt=""></div>
         </section>
     </section>
+    <section id="finalScreen" >
+        <img id="logoGame" src="images/logo.png" alt="">
+        <section class="finalgame">
+            <p class="finalMensager">FIM DO JOGO</p>
+            <P class="winner">Você</P>
+            <p class="win">VENCEU</p>
+        </section>
+        <section id="resultScore">
+            <p class="gamescore">Game 1: Vencedor - Você: 3 Maquina: 1</p>
+        </section>
+        <p class="restartGame">Jogar novamente?</p>
+        <input type="button" value="START" class="startButton">
+    </section>
+    <footer id="endSite">
+        <p id="signature">Design e desenvolvimento por:<a href="http://www.github.com/BezerraPedrinho" > <b> Pedro Henrique</b></a> </p>
+    </footer>
 </body>
 
 </html>
