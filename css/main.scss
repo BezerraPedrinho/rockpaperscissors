@@ -14,7 +14,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.logoStart {
+.startScreen__container {
   display: flex;
   width: 275px;
   flex-direction: row;
@@ -22,16 +22,16 @@ body {
   justify-content: center;
   margin-top: 80px;
 }
-.iconSize {
+.icons {
   width: 91px;
 }
-#logo {
+#logoName {
   display: flex;
   align-self: center;
   width: 256px;
   margin-bottom: 120px;
 }
-.startButton {
+.startBtn {
   width: 208px;
   height: 52px;
   background-color: #f15a24;
@@ -41,8 +41,12 @@ body {
   font-size: 32px;
   color: #fbb03b;
 }
+.startBtn:hover{
+  background-color: #fbb03b;
+  color: #f15a24;;
+}
 
-#logoGame {
+.smallsize {
   margin-top: 30px;
   display: flex;
   
@@ -61,10 +65,10 @@ body {
   background-color: red;
   justify-content: space-between;
 }
-#player {
+#scoreboardChoices__player {
   width: 92px;
 }
-.playerCounter {
+.player__counter {
   font-size: 32px;
   font-weight: 700;
   margin: 0;
@@ -75,7 +79,7 @@ body {
   margin: 0;
   text-align: center;
 }
-.playerChoice {
+.player__choice {
   height: 91px;
   width: 91px;
   background-color: #f15a24;
@@ -89,13 +93,13 @@ body {
 #computer {
   width: 92px;
 }
-.computerCounter {
+.computer__counter {
   font-size: 32px;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-.computerChoice {
+.computer__choice {
   height: 91px;
   width: 91px;
   background-color: #f15a24;
@@ -115,19 +119,19 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.finalMensager{
+.finalgame__Mensager{
   margin: 0;
   font-size: 32px;
   font-weight: 700;
   text-align: center;
 }
-.winner{
+.finalgame__winner{
   margin: 0;
   font-size: 20px;
   text-align: center;
   font-weight: 700;
 }
-.win{
+.finalgame__win{
   margin: 0;
   font-size: 20px;
   text-align: center;
@@ -136,7 +140,7 @@ body {
 #resultScore{
   height: 150px;
 }
-.gamescore{
+.resultScore__text{
   margin: 0;
   font-size: 15px;
   text-align: center;
@@ -153,7 +157,7 @@ body {
  position: fixed;
  bottom: 8px;
 }
-#signature {
+#endSite__text {
   color: #f15a24;
   font-size: 12px;
   font-weight: 500;

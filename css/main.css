@@ -1,0 +1,191 @@
+* {
+  margin: none;
+  padding: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #ffee97;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#startScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.startScreen__container {
+  display: flex;
+  width: 275px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.icons {
+  width: 91px;
+}
+
+#logoName {
+  display: flex;
+  align-self: center;
+  width: 256px;
+  margin-bottom: 120px;
+}
+
+.startBtn {
+  width: 208px;
+  height: 52px;
+  background-color: #f15a24;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 32px;
+  color: #fbb03b;
+}
+
+.startBtn:hover {
+  background-color: #fbb03b;
+  color: #f15a24;
+}
+
+.smallsize {
+  margin-top: 30px;
+  display: flex;
+  width: 208px;
+}
+
+#gameScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboardChoices {
+  display: flex;
+  flex-direction: row;
+  width: 290px;
+  margin-top: 50px;
+  background-color: red;
+  justify-content: space-between;
+}
+
+#scoreboardChoices__player {
+  width: 92px;
+}
+
+.player__counter {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.name {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.player__choice {
+  height: 91px;
+  width: 91px;
+  background-color: #f15a24;
+}
+
+.theX {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+#computer {
+  width: 92px;
+}
+
+.computer__counter {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.computer__choice {
+  height: 91px;
+  width: 91px;
+  background-color: #f15a24;
+}
+
+#resultPhase {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+}
+
+#finalScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.finalgame__Mensager {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.finalgame__winner {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.finalgame__win {
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#resultScore {
+  height: 150px;
+}
+
+.resultScore__text {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.restartGame {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#endSite {
+  display: flex;
+  align-self: center;
+  position: fixed;
+  bottom: 8px;
+}
+
+#endSite__text {
+  color: #f15a24;
+  font-size: 12px;
+  font-weight: 500;
+}/*# sourceMappingURL=main.css.map */
