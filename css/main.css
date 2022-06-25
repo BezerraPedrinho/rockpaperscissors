@@ -5,10 +5,49 @@
 }
 
 body {
-  background-color: #ffee97;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ffee97;
+}
+body .icons {
+  width: 91px;
+}
+body .logoName, body .logoName--smallsize {
+  display: flex;
+  align-self: center;
+  width: 256px;
+  margin: 0 0 120px 0;
+}
+body .logoName--smallsize {
+  margin: 30px 0 0 0;
+  width: 208px;
+}
+body .startBtn {
+  width: 208px;
+  height: 52px;
+  background-color: #f15a24;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 32px;
+  cursor: pointer;
+  color: #fbb03b;
+}
+body .startBtn:hover {
+  background-color: #fbb03b;
+  color: #f15a24;
+}
+body #endSite {
+  display: flex;
+  align-self: center;
+  position: fixed;
+  bottom: 8px;
+}
+body #endSite #endSite__text {
+  color: #f15a24;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 #startScreen {
@@ -16,8 +55,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-.startScreen__container {
+#startScreen .startScreen__container {
   display: flex;
   width: 275px;
   flex-direction: row;
@@ -26,43 +64,16 @@ body {
   margin-top: 80px;
 }
 
-.icons {
-  width: 91px;
-}
-
-#logoName {
-  display: flex;
-  align-self: center;
-  width: 256px;
-  margin-bottom: 120px;
-}
-
-.startBtn {
-  width: 208px;
-  height: 52px;
-  background-color: #f15a24;
-  border-radius: 10px;
-  border: none;
-  font-weight: 700;
-  font-size: 32px;
-  color: #fbb03b;
-}
-
-.startBtn:hover {
-  background-color: #fbb03b;
-  color: #f15a24;
-}
-
-.smallsize {
-  margin-top: 30px;
-  display: flex;
-  width: 208px;
-}
-
 #gameScreen {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.name {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
 }
 
 .scoreboardChoices {
@@ -73,56 +84,42 @@ body {
   background-color: red;
   justify-content: space-between;
 }
-
-#scoreboardChoices__player {
+.scoreboardChoices #player {
   width: 92px;
 }
-
-.player__counter {
+.scoreboardChoices #player .player__counter {
   font-size: 32px;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-
-.name {
-  font-size: 12px;
-  margin: 0;
-  text-align: center;
-}
-
-.player__choice {
+.scoreboardChoices #player .player__choice {
   height: 91px;
   width: 91px;
   background-color: #f15a24;
 }
-
-.theX {
+.scoreboardChoices .scoreboardChoices__X {
   font-size: 40px;
   margin: 0;
   text-align: center;
   font-weight: 700;
 }
-
-#computer {
+.scoreboardChoices #computer {
   width: 92px;
 }
-
-.computer__counter {
+.scoreboardChoices #computer .computer__counter {
   font-size: 32px;
   font-weight: 700;
   margin: 0;
   text-align: center;
 }
-
-.computer__choice {
+.scoreboardChoices #computer .computer__choice {
   height: 91px;
   width: 91px;
   background-color: #f15a24;
 }
 
 #resultPhase {
-  width: 100%;
   font-size: 16px;
   text-align: center;
   margin: 0;
@@ -138,54 +135,43 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-.finalgame__Mensager {
+#finalScreen .finalgame__Mensager {
+  font-weight: 700;
+  text-align: center;
   margin: 0;
   font-size: 32px;
+}
+#finalScreen .finalgame__winner {
   font-weight: 700;
   text-align: center;
-}
-
-.finalgame__winner {
   margin: 0;
-  font-size: 20px;
   text-align: center;
-  font-weight: 700;
+  font-size: 20px;
 }
-
-.finalgame__win {
+#finalScreen .finalgame__win {
+  font-weight: 700;
+  text-align: center;
   margin: 0;
-  font-size: 20px;
   text-align: center;
-  font-weight: 700;
+  font-size: 25px;
 }
-
-#resultScore {
+#finalScreen #resultScore {
   height: 150px;
+  border: 2px #f15a24 solid;
+  width: 300px;
+  border-radius: 8px;
+  padding: 5px;
 }
-
-.resultScore__text {
+#finalScreen #resultScore .resultScore__text {
+  font-weight: 700;
+  text-align: center;
   margin: 0;
   font-size: 15px;
-  text-align: center;
-  font-weight: 700;
 }
-
-.restartGame {
+#finalScreen .restartGame {
   font-size: 15px;
   font-weight: 700;
   text-align: center;
-}
-
-#endSite {
-  display: flex;
-  align-self: center;
-  position: fixed;
-  bottom: 8px;
-}
-
-#endSite__text {
-  color: #f15a24;
-  font-size: 12px;
-  font-weight: 500;
+  margin: 0;
+  margin: 1em 0 1em 0;
 }/*# sourceMappingURL=main.css.map */

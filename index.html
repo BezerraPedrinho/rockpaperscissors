@@ -13,26 +13,26 @@
 </head>
 
 <body>
-    <Section id="startScreen" style="display: none;">
+    <Section id="startScreen"  style="display: none;">
         <section class="startScreen__container">
             <img class="icons" src="images/rock.png" alt=""></div>
             <img class="icons" src="images/paper.png" alt=""></div>
             <img class="icons" src="images/scissors.png" alt=""></div>
-            <img id="logoName" src="images/logo.png" alt=""></div>
+            <img class="logoName" src="images/logo.png" alt=""></div>
             <input type="button" value="START" class="startBtn">
         </section>
     </Section>
-    <section id="gameScreen" style="display: none;">
+    <section id="gameScreen"style="display: none;" >
 
-        <img class="logoName smallsize" src="images/logo.png" alt="">
+        <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
 
         <section class="scoreboardChoices">
-            <section id="scoreboardChoices__player">
+            <section id="player">
                 <p class="player__counter">0</p>
                 <p class="name">Você</p>
                 <div class="player__choice"></div>
             </section>
-            <div class="theX">X</div>
+            <div class="scoreboardChoices__X">X</div>
             <section id="computer">
                 <p class="computer__counter">0</p>
                 <p class="name">Máquina</p>
@@ -50,7 +50,7 @@
         </section>
     </section>
     <section id="finalScreen" >
-        <img class="logoName smallsize" src="images/logo.png" alt="">
+        <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
         <section class="finalgame">
             <p class="finalgame__Mensager">FIM DO JOGO</p>
             <P class="finalgame__winner">Você</P>

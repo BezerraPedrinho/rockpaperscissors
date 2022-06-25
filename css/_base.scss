@@ -1,0 +1,58 @@
+$mainColor: #ffee97;
+$darkColor: #f15a24;
+$screensColor: #fbb03b;
+@mixin aligCenterComponents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  margin: none;
+  padding: none;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  @include aligCenterComponents();
+  background-color: $mainColor;
+  .icons {
+    width: 91px;
+  }
+  .logoName {
+    display: flex;
+    align-self: center;
+    width: 256px;
+    margin: 0 0 120px 0;
+    &--smallsize {
+      @extend .logoName;
+      margin: 30px 0 0 0;
+      width: 208px;
+    }
+  }
+  .startBtn {
+    width: 208px;
+    height: 52px;
+    background-color: $darkColor;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+    color: $screensColor;
+    &:hover {
+      background-color: $screensColor;
+      color: $darkColor;
+    }
+  }
+  #endSite {
+    display: flex;
+    align-self: center;
+    position: fixed;
+    bottom: 8px;
+    #endSite__text {
+      color: $darkColor;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+}
