@@ -1,7 +1,7 @@
 #gameScreen {
   @include aligCenterComponents();
 }
-@mixin competitorCounterStyle{
+@mixin competitorCounterStyle {
   font-size: 32px;
   font-weight: 700;
   margin: 0;
@@ -29,10 +29,9 @@
     width: 92px;
     .player__counter {
       @include competitorCounterStyle();
-     
     }
     .player__choice {
-     @include competitorChoiceStyle(); 
+      @include competitorChoiceStyle();
     }
   }
   .scoreboardChoices__X {
@@ -41,7 +40,6 @@
     text-align: center;
     font-weight: 700;
   }
-
   #computer {
     width: 92px;
     .computer__counter {
