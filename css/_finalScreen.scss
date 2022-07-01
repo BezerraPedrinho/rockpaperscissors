@@ -1,38 +1,39 @@
-@mixin textMarginAlignWeight {
+%textMarginAlignWeight {
   font-weight: 700;
   text-align: center;
   margin: 0;
 }
-#finalScreen {
-  @include aligCenterComponents();
-  .finalgame__Mensager {
-    @include textMarginAlignWeight();
+.finalScreen {
+  @extend %center;
+  .finalgame__mensager {
+    @extend %textMarginAlignWeight;
     font-size: 32px;
   }
   .finalgame__winner {
-    @include textMarginAlignWeight();
+    @extend %textMarginAlignWeight;
     text-align: center;
     font-size: 20px;
   }
   .finalgame__win {
-    @include textMarginAlignWeight();
+    @extend %textMarginAlignWeight;
     text-align: center;
     font-size: 25px;
   }
-  #resultScore {
+  .resultScore {
     height: 150px;
     border: 2px $darkColor solid;
     width: 300px;
     border-radius: 8px;
     padding: 5px;
     .resultScore__text {
-      @include textMarginAlignWeight();
+      @extend %textMarginAlignWeight;
       font-size: 15px;
     }
   }
   .restartGame {
     font-size: 15px;
-    @include textMarginAlignWeight();
+    @extend %textMarginAlignWeight;
     margin: 1em 0 1em 0;
   }
+
 }
