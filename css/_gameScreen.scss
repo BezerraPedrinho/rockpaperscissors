@@ -1,0 +1,73 @@
+.gameScreen {
+  @extend %center;
+}
+
+%competitorCounterStyle {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+%competitorChoiceStyle {
+  height: 91px;
+  width: 91px;
+  background-color: $darkColor;
+}
+
+.name {
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
+}
+
+.scoreboardChoices {
+  display: flex;
+  flex-direction: row;
+  width: 290px;
+  margin-top: 50px;
+  background-color: red;
+  justify-content: space-between;
+
+  .player {
+    width: 92px;
+
+    .player__counter {
+      @extend %competitorCounterStyle;
+    }
+
+    .player__choice {
+      @extend %competitorChoiceStyle;
+    }
+  }
+
+  .scoreboardChoices__X {
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .computer {
+    width: 92px;
+
+    .computer__counter {
+      @extend %competitorCounterStyle;
+    }
+
+    .computer__choice {
+      @extend %competitorChoiceStyle;
+    }
+  }
+}
+
+.resultPhase {
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,14 @@
+.startScreen {
+  @extend %center;
+  
+  .startScreen__container {
+    display: flex;
+    width: 275px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  
+}
+
