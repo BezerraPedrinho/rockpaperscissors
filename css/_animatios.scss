@@ -1,24 +1,26 @@
 @mixin glow($delayTime) {
-    animation: showMe;
-    animation-duration: 0.3s;
-    animation-delay: $delayTime;
-    opacity: 0;
-    animation-fill-mode: forwards;
-    @keyframes showMe {
-        to {
-            opacity: 1;
-        }
+  animation: showMe;
+  animation-duration: 0.3s;
+  animation-delay: $delayTime;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  @keyframes showMe {
+    to {
+      opacity: 1;
     }
+  }
 }
-%iconsAnimation {
-    animation: bounce 1s both;
 
-    @keyframes bounce {
-        50% {
-            transform: translateY(50px) scale(2);
-        }
-        100% {
-            transform: translateY(0) scale(1);
-        }
+%iconsAnimation {
+  animation: bounce 1s both;
+
+  @keyframes bounce {
+    50% {
+      transform: translateY(50px) scale(2);
     }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    
+  }
 }
