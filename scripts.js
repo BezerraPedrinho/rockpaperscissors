@@ -1,7 +1,8 @@
 let playerScore = 0;
 let computerScore = 0;
-let result = '';
-
+let roundWinnner = '';
+numberGame=0;
+gameLog="Start Game";
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
   const screenOne = document.querySelector(".startScreen");
@@ -19,22 +20,22 @@ const choices = {
   '#scissorsBtn': 'scissors'
 }
 playerChoice = "";
-let pcChoice = 0;
+let randomChoice = 0;
 
 for (let choice in choices) {
   const theChoice = choices[choice];
   const btnPlayerChoice = document.querySelector(choice);
   btnPlayerChoice.addEventListener("click", () => {
     playerChoice = theChoice;
-    
-    pcChoice = Math.floor(Math.random() * choices[choice].length);
-    if (pcChoice === 1) {
+
+    randomChoice = Math.floor(Math.random() * choices[choice].length);
+    if (randomChoice === 1) {
       computerChoice = 'rock';
     }
-    if (pcChoice === 2) {
+    if (randomChoice === 2) {
       computerChoice = 'paper';
     }
-    if (pcChoice === 3) {
+    if (randomChoice === 3) {
       computerChoice = 'scissors';
     }
     console.log(playerChoice);
@@ -44,10 +45,10 @@ for (let choice in choices) {
       (playerChoice == 'rock' && computerChoice == 'scissors')||
       (playerChoice == 'paper' && computerChoice == 'rock')||
       (playerChoice == 'scissors' && computerChoice == 'paper')){
-        result='Humam win';
+        roundWinnner='Player win';
         playerScore++;
         let placar = `O placar é : player: ${playerScore} x Computer: ${computerScore}`
-        console.log(result);
+        console.log(roundWinnner);
         console.log(placar);
     }
 
@@ -55,86 +56,38 @@ for (let choice in choices) {
       (computerChoice == 'rock' && playerChoice == 'scissors')||
       (computerChoice == 'paper' && playerChoice == 'rock')||
       (computerChoice == 'scissors' && playerChoice == 'paper')){
-        result='Computer win';
+        roundWinnner='Computer win';
         computerScore++;
-        let placar = `O placar é : player: ${playerScore} x Computer: ${computerScore}`
-        console.log(result);
+        let placar = `O placar é : player: ${playerScore} x Computer: ${computerScore}`;
+        console.log(roundWinnner);
         console.log(placar);
-        
     }
 
     if(playerChoice === computerChoice){
-      result='empate';
-      console.log(result);
+      roundWinnner = 'Draw';
+      console.log(roundWinnner);
     }
+        
+    if(computerScore == 3){
+        winnerGame = "Computer win";
+        console.log (winnerGame);
+        numberGame++;
+        gamelog = ` Game: ${numberGame} The game is over and the Winner is : ${winnerGame} result CPU : ${computerScore} x Player ${playerScore}`
+        console.log(gamelog);
+        playerScore = 0;
+        computerScore = 0;
+    }
+    if(playerScore == 3){
+      winnerGame = "Player Win";
+      console.log (winnerGame);
+      numberGame++
+      gamelog = `Game: ${numberGame} The game is over and the Winner is : ${winnerGame} result CPU : ${computerScore} x Player ${playerScore}`
+      console.log(gamelog);
+      playerScore = 0;
+      computerScore = 0;
+  }
     
+
   })
-
-}
-
-/*
-function getPlayerChoice() {
-  
-  playerChoice = "";
-  const rockBtn = document.querySelector('#rockBtn');
-  rockBtn.addEventListener('click', () => {
    
-     
-  });
-
-  const paperBtn = document.querySelector('#paperBtn')
-  paperBtn.addEventListener('click', () => {
-    let playerChoice = 'paper';
-    console.log(playerChoice);
-    
-    
-  });
-
-  
-  const scissorsBtn = document.querySelector('#scissorsBtn')
-  scissorsBtn.addEventListener('click', ()=>{
-    
-    let playerChoice = 'scissors';
-      console.log(playerChoice);
-      
-  });
-
-  if(pcChoice === playerChoice){
-    console.log("empate")
-   }
-  
 }
-getPlayerChoice()
-*/
-/*
-function game( ){
-
-  getComputerChoice()
-  getPlayerChoice()
-  if(getPlayerChoice === getComputerChoice){
-    console.log('Empate')
-  }
-  if( getPlayerChoice === "rock" && getComputerChoice ==="scissors" ||
-      getPlayerChoice === "paper" && getComputerChoice ==="rock" ||
-      getPlayerChoice === "scissors" && getComputerChoice ==="paper"){
-      
-        console.log('Player Win this Round');
-        playerScore + 1;
-
-  }
-
-  if( getComputerChoice === "rock" && getPlayerChoice ==="scissors" ||
-      getComputerChoice === "paper" && getComputerChoice ==="rock" ||
-      getComputerChoice === "scissors" && getComputerChoice ==="paper"){
-      
-        console.log('Computer Win this Round');
-        ComputerScore + 1;
-        console.log()
-    }
-}
-game();
-
-*/
-
-
-
