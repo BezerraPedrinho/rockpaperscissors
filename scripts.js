@@ -1,30 +1,43 @@
 let playerScore = 0;
 let computerScore = 0;
-let roundWinnner = '';
-numberGame=0;
-gameLog="Start Game";
+numberGame = 0;
+gameLog = "Start Game";
+
+const screenOne = document.querySelector(".startScreen");
+const screenTwo = document.querySelector(".gameScreen");
+const screenThree = document.querySelector(".finalScreen");
+
 const btn = document.querySelector('#btn');
 btn.addEventListener('click', () => {
-  const screenOne = document.querySelector(".startScreen");
   screenOne.style.display = "none";
-  const screenTwo = document.querySelector(".gameScreen");
   screenTwo.style.display = "flex";
 
 });
 
-
+function endGame() {
+  screenThree.style.display = "flex";
+  screenTwo.style.display = "none";
+}
 
 const choices = {
   '#rockBtn': 'rock',
   '#paperBtn': 'paper',
   '#scissorsBtn': 'scissors'
 }
-playerChoice = "";
+let playerChoice = "";
 let randomChoice = 0;
+const painelPlayer = document.querySelector("#playerChoiceCard");
+const painelComputer = document.querySelector("#machineChoiceCard");
+const playerCounter = document.querySelector("#playerScorePainel");
+const computerCounter = document.querySelector("#computerScorePainel");
+const roundWinner = document.querySelector("#resultPhasePainel");
+const winner = document.querySelector("#winnerGame");
 
+  
 for (let choice in choices) {
   const theChoice = choices[choice];
   const btnPlayerChoice = document.querySelector(choice);
+
   btnPlayerChoice.addEventListener("click", () => {
     playerChoice = theChoice;
 
@@ -38,56 +51,62 @@ for (let choice in choices) {
     if (randomChoice === 3) {
       computerChoice = 'scissors';
     }
-    console.log(playerChoice);
-    console.log(computerChoice);
 
-    if(
-      (playerChoice == 'rock' && computerChoice == 'scissors')||
-      (playerChoice == 'paper' && computerChoice == 'rock')||
-      (playerChoice == 'scissors' && computerChoice == 'paper')){
-        roundWinnner='Player win';
-        playerScore++;
-        let placar = `O placar é : player: ${playerScore} x Computer: ${computerScore}`
-        console.log(roundWinnner);
-        console.log(placar);
-    }
+    painelPlayer.src = `images/${playerChoice}.png`;
+    painelComputer.src = `images/${computerChoice}.png`;
+    if (
+      (playerChoice == 'rock' && computerChoice == 'scissors') ||
+      (playerChoice == 'paper' && computerChoice == 'rock') ||
+      (playerChoice == 'scissors' && computerChoice == 'paper')) {
+      roundWinner.innerText = 'You win this round';
+      playerScore++;
+      playerCounter.innerText = playerScore;
 
-    if(
-      (computerChoice == 'rock' && playerChoice == 'scissors')||
-      (computerChoice == 'paper' && playerChoice == 'rock')||
-      (computerChoice == 'scissors' && playerChoice == 'paper')){
-        roundWinnner='Computer win';
-        computerScore++;
-        let placar = `O placar é : player: ${playerScore} x Computer: ${computerScore}`;
-        console.log(roundWinnner);
-        console.log(placar);
+
     }
 
-    if(playerChoice === computerChoice){
-      roundWinnner = 'Draw';
-      console.log(roundWinnner);
+    if (
+      (computerChoice == 'rock' && playerChoice == 'scissors') ||
+      (computerChoice == 'paper' && playerChoice == 'rock') ||
+      (computerChoice == 'scissors' && playerChoice == 'paper')) {
+      roundWinner.innerText = 'Machine win this round';
+      computerScore++;
+      computerCounter.innerText = computerScore;
+
+
     }
-        
-    if(computerScore == 3){
-        winnerGame = "Computer win";
-        console.log (winnerGame);
-        numberGame++;
-        gamelog = ` Game: ${numberGame} The game is over and the Winner is : ${winnerGame} result CPU : ${computerScore} x Player ${playerScore}`
-        console.log(gamelog);
-        playerScore = 0;
-        computerScore = 0;
+
+    if (playerChoice === computerChoice) {
+      roundWinner.innerText = 'Draw';
+
     }
-    if(playerScore == 3){
-      winnerGame = "Player Win";
-      console.log (winnerGame);
+
+    if (computerScore == 3) {
+      numberGame++;
+      endGame();
+      winner.innerText = 'Machine';
+      
+    }
+
+    if (playerScore == 3) {
       numberGame++
-      gamelog = `Game: ${numberGame} The game is over and the Winner is : ${winnerGame} result CPU : ${computerScore} x Player ${playerScore}`
-      console.log(gamelog);
-      playerScore = 0;
-      computerScore = 0;
-  }
-    
+      winner.innerText = 'You';
+      endGame();
+    }
 
   })
-   
+
 }
+const restartGameBtn = document.querySelector("#restartGame");
+restartGameBtn.addEventListener('click', ()=>{
+  screenThree.style.display = "none";
+  screenTwo.style.display = "flex";
+  playerScore = 0;
+  computerScore = 0;
+  playerCounter.innerText = 0;
+  computerCounter.innerText = 0;
+  playerChoice = "";
+  computerChoice = "";
+  painelPlayer.src = "";
+  painelComputer.src =""; 
+});
