@@ -1,8 +1,10 @@
 let playerScore = 0;
 let computerScore = 0;
-numberGame = 0;
-gameLog = "Start Game";
-
+let gameID = 0;
+let winnerName = "";
+let loserName = "";
+let winnerScore = 0;
+let loserScore = 0;
 const screenOne = document.querySelector(".startScreen");
 const screenTwo = document.querySelector(".gameScreen");
 const screenThree = document.querySelector(".finalScreen");
@@ -26,14 +28,21 @@ const choices = {
 }
 let playerChoice = "";
 let randomChoice = 0;
+
 const painelPlayer = document.querySelector("#playerChoiceCard");
 const painelComputer = document.querySelector("#machineChoiceCard");
 const playerCounter = document.querySelector("#playerScorePainel");
 const computerCounter = document.querySelector("#computerScorePainel");
 const roundWinner = document.querySelector("#resultPhasePainel");
 const winner = document.querySelector("#winnerGame");
+const resultGame = document.querySelector('.resultScore');
+function recordGame() {
+  const gameLog = document.createElement('p');
+  gameLog.classList.add('resultScore__text');
+  gameLog.innerText = `Game ${gameID} Winner - ${winnerName}: ${winnerScore} x ${loserScore} ${loserName}`;
+  resultGame.appendChild(gameLog);
+}
 
-  
 for (let choice in choices) {
   const theChoice = choices[choice];
   const btnPlayerChoice = document.querySelector(choice);
@@ -72,33 +81,40 @@ for (let choice in choices) {
       roundWinner.innerText = 'Machine win this round';
       computerScore++;
       computerCounter.innerText = computerScore;
-
-
     }
 
     if (playerChoice === computerChoice) {
       roundWinner.innerText = 'Draw';
-
     }
 
     if (computerScore == 3) {
-      numberGame++;
+      gameID++;
+      winnerName = 'Machine';
+      loserName = "You";
+      winnerScore = computerScore;
+      loserScore = playerScore;
+      winner.innerText = winnerName;
       endGame();
-      winner.innerText = 'Machine';
-      
+      recordGame();
     }
 
     if (playerScore == 3) {
-      numberGame++
-      winner.innerText = 'You';
+      gameID++;
+      winnerName = 'You';
+      loserName = 'Machine';
+      winnerScore = playerScore;
+      loserScore = computerScore;
+      winner.innerText = winnerName;
       endGame();
+      recordGame();
     }
 
   })
 
 }
+
 const restartGameBtn = document.querySelector("#restartGame");
-restartGameBtn.addEventListener('click', ()=>{
+restartGameBtn.addEventListener('click', () => {
   screenThree.style.display = "none";
   screenTwo.style.display = "flex";
   playerScore = 0;
@@ -108,5 +124,6 @@ restartGameBtn.addEventListener('click', ()=>{
   playerChoice = "";
   computerChoice = "";
   painelPlayer.src = "";
-  painelComputer.src =""; 
+  painelComputer.src = "";
+  roundWinner.innerText = "";
 });
