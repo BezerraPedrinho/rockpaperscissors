@@ -39,7 +39,7 @@ let computerScore = 0;
 const playerCounter = document.querySelector("#playerScorePainel");
 const computerCounter = document.querySelector("#computerScorePainel");
 const roundWinner = document.querySelector("#resultPhasePainel");
-function gameRules(playerChoice, computerChoice) {
+function resolveRound(playerChoice, computerChoice) {
   if (
     (playerChoice == "rock" && computerChoice == "scissors") ||
     (playerChoice == "paper" && computerChoice == "rock") ||
@@ -97,7 +97,7 @@ for (let choice in choices) {
     playerChoice = theChoice;
     computerChoice = getcomputerChoice();
     renderChoices(playerChoice,computerChoice);
-    gameRules(playerChoice,computerChoice);
+    resolveRound(playerChoice,computerChoice);
   });
 
 }
