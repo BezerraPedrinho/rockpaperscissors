@@ -2,70 +2,79 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Jó - Quem? - Pô</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&display=swap" rel="stylesheet">
+  <title>Jó - Quem? - Pô</title>
+
 </head>
 
 <body>
-    <Section class="startScreen" style="display: none;">
-        <section class="startScreen__container">
-            <img class="icons" src="images/rock.png" alt=""></div>
-            <img class="icons" src="images/paper.png" alt=""></div>
-            <img class="icons" src="images/scissors.png" alt=""></div>
-            <img class="logoName" src="images/logo.png" alt=""></div>
-            <input type="button" value="START" class="startBtn">
-        </section>
-    </Section>
-    <section class="gameScreen" >
+  <Section class="startScreen">
+    <section class="startScreen__container">
+      <img class="icons" src="images/rock.png" alt=""></div>
+      <img class="icons" src="images/paper.png" alt=""></div>
+      <img class="icons" src="images/scissors.png" alt=""></div>
+      <img class="logoName" src="images/logo.png" alt=""></div>
+      <input type="button" value="START" class="startBtn" id="btn">
+    </section>
+  </Section>
+  <section class="gameScreen" style="display: none;">
 
-        <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
+    <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
+    
+    <p class="resultPhase__text">Select your move!</p>
 
-        <section class="scoreboardChoices">
-            <section class="player">
-                <p class="player__counter">0</p>
-                <p class="name">Você</p>
-                <div class="player__choice"></div>
-            </section>
-            <div class="scoreboardChoices__X">X</div>
-            <section class="computer">
-                <p class="computer__counter">0</p>
-                <p class="name">Máquina</p>
-                <div class="computer__choice"></div>
-            </section>
-        </section>
-        <div class="resultPhase">
-            <p class="resultPhase__text">Você venceu</p>
-            <p class="resultPhase__text">Selecione seu movimento</p>
+    <section class="scoreboardChoices">
+      <section class="player">
+        <p class="player__counter" id="playerScorePainel">0</p>
+        <p class="name">You</p>
+        <div class="player__choice" >
+          <img class="icons" id="playerChoiceCard" src="" alt="">
         </div>
-        <section class="choices">
-            <img class="icons" src="images/rock.png" alt=""></div>
-            <img class="icons" src="images/paper.png" alt=""></div>
-            <img class="icons" src="images/scissors.png" alt=""></div>
-        </section>
+      </section>
+      <div class="scoreboardChoices__X">X</div>
+      <section class="computer">
+        <p class="computer__counter" id="computerScorePainel">0</p>
+        <p class="name">Machine</p>
+        <div class="computer__choice" >
+          <img class="icons" id="machineChoiceCard" src="" alt="">
+        </div>
+      </section>
     </section>
-    <section class="finalScreen" style="display: none;">
-        <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
-        <section class="finalgame">
-            <p class="finalgame__Mensager">FIM DO JOGO</p>
-            <P class="finalgame__winner">Você</P>
-            <p class="finalgame__win">VENCEU</p>
-        </section>
-        <section class="resultScore">
-            <p class="resultScore__text">Game 1: Vencedor - Você: 3 Maquina: 1</p>
-        </section>
-        <p class="restartGame">Jogar novamente?</p>
-        <input type="button" value="START" class="startBtn">
+    <div class="resultPhase">
+      <p class="resultPhase__text" id="resultPhasePainel"></p>
+    </div>
+    <section class="choices">
+      <img class="icons" src="images/rock.png" id="rockBtn" alt="">
+      <img class="icons" src="images/paper.png" id="paperBtn"alt="">
+      <img class="icons" src="images/scissors.png" id="scissorsBtn"alt="">
     </section>
-    <section class="endSite">
-        <p class="endSite__text">Design e desenvolvimento por:<a href="http://www.github.com/BezerraPedrinho"> <b> Pedro
-                    Henrique</b></a> </p>
-        </section>
+  </section>
+  <section class="finalScreen" style="display: none;">
+    <img class="logoName logoName--smallsize" src="images/logo.png" alt="">
+    <section class="finalgame">
+      <p class="finalgame__Mensager">GAME OVER</p>
+      <P class="finalgame__winner" id="winnerGame"></P>
+      <p class="finalgame__win">WIN</p>
+    </section>
+    <section class="resultScore">
+    </section>
+    <p class="endGame">Play Again?</p>
+    <input type="button" value="RESTART" class="startBtn" id="restartGame" >
+  </section>
+  <section class="endSite">
+    <p class="endSite__text">Design e dev por:<a href="http://www.github.com/BezerraPedrinho"> <b> Pedro
+          Henrique</b></a> </p>
+  </section>
+  <script src="scripts.js"></script>
 </body>
 
 </html>
